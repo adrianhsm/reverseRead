@@ -1,6 +1,6 @@
 {
   "name": "reverseread",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "reversely read a file, from end to beginning",
   "main": "index.js",
   "scripts": {
@@ -16,5 +16,9 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.1.2"
+  },
+  "repository" :{ 
+    "type" : "git",
+    "url" : "https://github.com/adrianhsm/reverseReadt"
   }
 }
