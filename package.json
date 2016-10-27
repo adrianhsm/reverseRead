@@ -1,0 +1,20 @@
+{
+  "name": "reverseread",
+  "version": "1.0.2",
+  "description": "reversely read a file, from end to beginning",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec --timeout 2000 --recursive tests/"
+  },
+  "keywords": [
+    "read",
+    "reverse"
+  ],
+  "author": "adrianhsm",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2"
+  }
+}
