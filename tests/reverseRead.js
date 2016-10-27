@@ -1,5 +1,6 @@
 var reverseReader = require("../index.js").reverseReader
 const expect = require('chai').expect
+const fs = require('fs')
 
 describe('reverseRead:test', ()=>{
    it('read:suc normal file', (done)=>{
@@ -53,6 +54,29 @@ describe('reverseRead:test', ()=>{
        })()
        var lines = []
        new reverseReader('tests/test3.txt', (err, line)=>{
+            if(err){
+                return
+            }
+            var li = resultGen.next()
+            if( li.done ){
+                expect(true).to.be.equal(true)
+                done()
+            }
+            if( line !== li.value ){
+                expect(line).to.be.equal(li.value)
+                done()
+            }
+        })
+   },1),
+   it('read:suc  long poem mix', (done)=>{
+       var results = fs.readFileSync('tests/test4.txt').toString().split(/\r{0,1}\n/).filter( (line)=>{
+           return line !== ''
+       }).slice(1).reverse()
+       var resultGen = (function* gen(){
+           yield* results
+       })()
+       var lines = []
+       new reverseReader('tests/test4.txt', (err, line)=>{
             if(err){
                 return
             }

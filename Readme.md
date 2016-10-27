@@ -1,10 +1,10 @@
-ReverseRead
+# ReverseRead
 
-add more test, sincerely sorry for the bug in previous version
+`It is a module to allow you to read a file line by line from end to beginning,
+    without having to load all the content at once at the risk of memory leak`
 
-Please check example/ReverseReadEx for usage
-
-Usage Example:
+## Example:
+```html
 new reverseReader('Test.txt', (err, line)=>{
     if(err){
         console.error(err)
@@ -12,8 +12,12 @@ new reverseReader('Test.txt', (err, line)=>{
     }
     console.log( line )
 })
+```
+
+## Install :
+`npm install reverseRead`
 
 
-PS:
-Please note that empty line will not be invoked with
+## Warning:
+`Please note that empty line will not be invoked with`
 

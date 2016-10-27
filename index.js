@@ -18,6 +18,9 @@ class reverseReader{
        this.reverseRead(path,cb)
        this.ee.on('line', (line)=>{
             if( line && line !== '' && line !== '\r'){
+                if( line.charAt(line.length-1) === '\r' ){
+                    line = line.substring(0,line.length-1)
+                }
                 cb(null, line)
             }
             this.ee.emit('lineread', {})
