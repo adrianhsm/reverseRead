@@ -1,13 +1,11 @@
 pipeline {
   agent any
   stages {
-    stage('Pull code') {
+    stage('') {
       steps {
-        git(url: 'git@github.com:adrianhsm/reverseRead.git', branch: 'master')
+        sh '''npm install
+npm test'''
       }
     }
-  }
-  environment {
-    GIT_ASKPASS = 'false'
   }
 }
