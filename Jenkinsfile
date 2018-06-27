@@ -3,7 +3,9 @@ pipeline {
   stages {
     stage('prepare') {
       steps {
-        sh 'echo "done"'
+        sh '''npm i
+npm test
+echo "done"'''
       }
     }
   }
