@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Pull code') {
       steps {
-        git(url: 'git@github.com:adrianhsm/reverseRead.git', branch: 'master', credentialsId: 'github_pk')
+        git(url: 'git@github.com:adrianhsm/reverseRead.git', branch: 'master')
       }
     }
   }
