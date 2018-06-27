@@ -7,4 +7,7 @@ pipeline {
       }
     }
   }
+  environment {
+    GIT_ASKPASS = 'false'
+  }
 }
