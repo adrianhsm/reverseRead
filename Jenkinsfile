@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('prepare') {
       steps {
-        sh '''npm i
+        sh '''echo $PATH
+npm i
 npm test
 echo "done"'''
       }
