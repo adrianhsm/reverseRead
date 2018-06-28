@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('prepare') {
       environment {
-        PATH = '/home/adrinahsm/Downloads/node-v8.11.1-linux-x64/bin'
+        PATH = '/home/adrinahsm/Downloads/node-v8.11.1-linux-x64/bin:$PATH'
       }
       steps {
         sh '''npm i
