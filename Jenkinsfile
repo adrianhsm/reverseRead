@@ -3,10 +3,12 @@ pipeline {
   stages {
     stage('prepare') {
       steps {
-        sh '''echo "start for preparation"
-npm i
-npm test
-echo "done"'''
+        sh 'npm i'
+      }
+    }
+    stage('test') {
+      steps {
+        sh 'npm test'
       }
     }
   }
